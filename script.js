@@ -3,14 +3,27 @@ const maior = document.querySelector('.maoirUnPreco')
 const volume = document.querySelector('.volume')
 const compraMaior = document.querySelector('.maiorOfertaDeCompra')
 const informacao = document.querySelector('.informacoes')
+const imagem = document.querySelector('.img')
+const modal = document.querySelector('.modal')
 
-criptoSelect.addEventListener('change', function () {
-    informacao.classList.remove('escondido')
 
-    if (!criptoSelect.value) {
+criptoSelect.addEventListener('change', () => {
+    if (criptoSelect.value) {
+        imagem.src = "./imagens/" + criptoSelect.value + ".png"
+    }
+    if (criptoSelect.value === 'SELECIONE') {
         informacao.classList.add('escondido')
         return;
+    } else {
+        informacao.classList.remove('escondido')
     }
+
+})
+
+criptoSelect.addEventListener('change', function () {
+
+
+
     const promiseResposta = fetch('https://www.mercadobitcoin.net/api/' + criptoSelect.value + '/ticker/')
 
     promiseResposta.then(function (resposta) {
@@ -23,5 +36,4 @@ criptoSelect.addEventListener('change', function () {
         })
 
     })
-
 })

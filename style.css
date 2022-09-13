@@ -9,14 +9,28 @@ body {
     justify-content: center;
 
     height: 100vh;
-}
 
+    background-color: orangered;
+}
 
 .texto {
     position: sticky;
     bottom: 600px;
     left: 500px;
+
     color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.img {
+    width: 120px;
+    height: 100px;
+}
+
+.imgMaior {
+    width: 120px;
+    height: 90px;
 }
 
 .conteiner {
@@ -27,7 +41,9 @@ body {
 
     padding: 10px;
 
-    background-color: orangered;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-image: url('./SL-0212121-40670-60.jpg');
+    background-size: 100vh;
     position: fixed;
 
     border-radius: 15px;
@@ -37,7 +53,7 @@ body {
 }
 
 select {
-    all: unset;
+
 
     background-color: black;
     color: white;
@@ -45,6 +61,7 @@ select {
     padding: 10px;
     border-radius: 5px;
 
+    font-weight: bold;
     font-size: larger;
     text-align: center;
 
@@ -54,13 +71,22 @@ select {
     margin-bottom: 20px;
 }
 
+option {
+    font-weight: bold;
+
+}
+
 .informacoes {
 
-    background-color: rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.9);
-    color: white;
+    background-color: rgba(rgb(2, 2, 2), rgb(0, 0, 0), rgb(0, 0, 0), 10%);
 
+    color: white;
     padding: 10px;
-    margin-bottom: 60px;
+    margin-top: 60px;
+
+    position: sticky;
+
+    font-family: sans-serif;
 
 }
 
